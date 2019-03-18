@@ -8,8 +8,8 @@ package com.technical.testing.timeduration;
 
 public class TimeDuration {
 	private int second;
-	private int min;
-	private int hr;
+	private int min=0;
+	private int hr=0;
 	
 	
 	public TimeDuration(int second) {
@@ -27,11 +27,11 @@ public class TimeDuration {
 	public int convertir(int second) {
 		
 		while(second>=3600) {
-			hr = second/3600;
+			hr =hr+ second/3600;
 			second = second%3600;
 		}
 		while(second>=60) {
-			min = second/60;
+			min =min+ second/60;
 			second = second%60;
 		}
 		return hr;
